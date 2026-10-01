@@ -203,4 +203,4 @@ The /old/ directory had directory listing enabled.
 The directory exposed a database backup file that was accessible through the web server.
 
 Evidence
-!
+![Screenshot](Screenshot-2019.png)
