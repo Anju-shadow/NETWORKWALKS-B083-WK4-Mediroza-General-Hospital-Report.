@@ -306,8 +306,9 @@ Regular penetration testing and vulnerability assessments should be performed to
 🐛Troublshooting and solution
 -
 - I encountered several times in Authentical and unable to bypass the login page .
-- Unable to unlock the password however i did Dictionary attack to find the password.
-- The firewall is secure as my scanner found it.
+- Unable to unlock the password by hashes then i  did Dictionary attack to find the password.
+- The firewall is secure and can't detect .
+- Whatweb showed 404 error .
 
 
 
