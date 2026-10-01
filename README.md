@@ -195,10 +195,22 @@ Based on the information collected during the footprinting and network scanning 
 ![Screenshot](Screenshot-g.png)
 ![Screenshot](Screenshot-h.png)
 
+
+◼️**_ CRITICAL DATA EXPOSURE_
+**
+This stage involved investigating the information obtained during the previous stages and looking beyond the obvious content. The project required identifying further sensitive information exposed by the client's server, including:
+
+Hospital employee salaries
+Hospital shareholder details
+During this stage, I analyzed the information available from the recovered data and investigated the additional exposure.
+
+Employee Salary Information
+
+Number of employees identified:
 **Directory Listing / Exposed Database Backup**
 Risk: Critical
 
-The /old/ directory had directory listing enabled.
+The  /old/ directory had directory listing enabled.
 
 The directory exposed a database backup file that was accessible through the web server and exposed critical information related role and finance ,contact info,share holders details etc.
 
@@ -239,3 +251,103 @@ It is critical point as anyone can misuse this info .
 | Linda Fourie          | Receptionist              | Front Office        | R19,000        |
 | Peter van Wyk         | Procurement Officer       | Supply Chain        | R38,000        |
 | Andile Mbeki          | Ward Clerk                | Administration      | R21,000        |
+The salary information discovered during the assessment was documented separately to avoid unnecessarily exposing sensitive information in the public repository.
+
+_Shareholder Information
+_
+The shareholder information identified during the assessment was also documented as part of the project evidence.
+
+Shareholder details:
+-------
+| Shareholder Name                  | Share Percentage | Share Class   |
+|-----------------------------------|------------------|---------------|
+| Dr. Rajesh Naidoo                 | 18%              | Ordinary      |
+| Cedar Health Holdings (Pty) Ltd   | 15%              | Ordinary      |
+| Dr. Johan van der Merwe           | 12%              | Ordinary      |
+| Reddy Family Trust                | 11%              | Ordinary      |
+| Thabo Molefe                      | 10%              | Ordinary      |
+| Sarah Botha                       | 9%               | Ordinary      |
+| Dr. Ahmed Kara                    | 8%               | Preferential  |
+| Naledi Zulu                       | 7%               | Ordinary      |
+| Michael Roberts                   | 6%               | Ordinary      |
+| Dr. Vikram Chetty                 | 4%               | Preferential  |
+
+🩹**RECOMMENDATIONS AND REMEDIATIONS
+**
+1.Prevent SQL Injection
+
+The application should use parameterized queries/prepared statements instead of directly inserting user input into SQL queries. Input validation should also be implemented as an additional security control.
+
+Improve Authentication Responses
+
+The login system should avoid revealing whether the username or password is incorrect. A generic authentication message should be used to reduce username enumeration.
+
+2.Protect Patient Information
+
+Confidential patient reports should only be accessible to properly authenticated and authorized users. Access controls should be reviewed and tested regularly.
+
+3.Strengthen File Protection
+
+Sensitive files should use strong encryption and appropriate password protection. Passwords used to protect sensitive files should be strong and unique.
+
+4.Protect Sensitive Database Information
+
+Employee salary and shareholder information should not be unnecessarily exposed through the web application. Database permissions should follow the principle of least privilege.
+
+5.Secure Database Accounts
+
+The web application should use a database account with only the permissions it actually needs. This can reduce the potential impact of a successful SQL Injection attack.
+
+6.Conduct Regular Security Testing
+
+Regular penetration testing and vulnerability assessments should be performed to identify weaknesses before they can be exploited.
+
+🐛Troublshooting and solution
+-
+- I encountered several times in Authentical and unable to bypass the login page .
+- Unable to unlock the password however i did Dictionary attack to find the password.
+- The firewall is secure as my scanner found it.
+
+
+
+🔐** Security and Ethical Use**
+This laboratory is strictly used for educational purposes only. All activities conducted within this lab must comply with applicable laws and regulations. Unauthorized access to computer systems is illegal and unethical. All penetration testing and security assessments must be conducted only on systems for which explicit written permission has been obtained from the authorized owner.
+
+💡WHAT I LEARNED
+--
+Week-4 was one of the most challenging practical exercises I have completed so far, but it gave me valuable hands-on experience.
+
+I learned:
+
+- How to approach a black-box penetration test.
+- How to analyze a web application's authentication mechanism.
+- How SQL Injection vulnerabilities can occur.
+- How improper input handling can affect database queries.
+- How to identify and document proof of exploitation.
+ - How to analyze protected files.
+- How to use Hash Calculator for hash-related analysis.
+- How to use the Networkwalks Password Cracker.
+- How to investigate sensitive information exposure.
+- How to perform risk analysis.
+- How to provide practical security recommendations.
+- How to document penetration-testing findings professionally.
+- How important authorization and scope are during security testing.
+- How to think about security from both an attacker and defender perspective.
+- How to improve my penetration-testing report writing skills.
+  
+CONCLUSION
+--
+
+Week 4 gave me practical experience in web application penetration testing, SQL Injection, data extraction, password/hash analysis, and security reporting. The project required me to work through different stages, beginning with identifying an entry point and analyzing the application's authentication mechanism. I was able to identify a SQL Injection vulnerability and use the authorized testing environment to demonstrate its potential impact. The project also involved analyzing protected files and investigating further exposure of sensitive information, including employee salary and shareholder information, as required by the assessment.
+Overall, this project improved my technical skills, problem-solving ability, vulnerability analysis, risk assessment, and professional report-writing skills. Most importantly, I learned that successful penetration testing is not only about finding vulnerabilities but also about understanding their impact, documenting clear evidence, and providing practical recommendations for remediation.
+---------
+:👤 Author
+
+--
+ANJU
+Cybersecurity Intern BO83
+
+LinkedIn: www.linkedin.com/in/anju-84b8ba394
+Credit
+-
+NetworkWalks Academy — Waqas Karim (CCIE)
