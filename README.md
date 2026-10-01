@@ -64,8 +64,13 @@ Step 2:-Now go to patient portal .
 step 3:-As we have no credential to login lets use SQL based command .The login page returned different responses for invalid usernames and valid usernames with an incorrect password.
 
 This behavior allowed confirmation of whether a username existed.
-![Screenshot](Screenshot-2)
-step 4 :- Now apply hyperbased sql command.
-![Screenshot](Screenshot-3)
+Step 4 :- Now added another hyper sql command to login
+Step 5 :- These are reports of some patients .
+Step 6:- Downloaded it and we will try to open it by carcking password .
+Step 7:- Go to Networkwalks and use these two tools:---
+ - Networkwalks Hash-Calculator
+- Networkwalks Password Cracker
+(a) Opening Hash-calculator then I Uploaded the locked PDF to the Hash Calculator to get the hash lines. The Hash Calculator supports MD5, SHA-1, SHA-256, SHA-384, and SHA-512 or extract a crackable hash from dedicated file .
+(b) Now paste the hash lines in NW password cracker tools .
 
 
