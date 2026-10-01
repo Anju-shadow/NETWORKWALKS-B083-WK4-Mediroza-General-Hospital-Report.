@@ -79,14 +79,113 @@ Step 7:- Go to Networkwalks and use these two tools:---
  - Networkwalks Hash-Calculator
 - Networkwalks Password Cracker
 (a) Opening Hash-calculator then I Uploaded the locked PDF to the Hash Calculator to get the hash lines. The Hash Calculator supports MD5, SHA-1, SHA-256, SHA-384, and SHA-512 or extract a crackable hash from dedicated file .
-(b) Now paste the hash lines in NW password cracker to get password.
+(b) Then pasted the hash lines in NW password cracker to get password.
 ![Screenshot](Screenshot-6.png)
 ![Screenshot](Screenshot-7.png)
 
 (c)Here i will use Dictonery based attack .
 ![Screenshot](Screenshot-8.png)
 
-Now we got password 
+Now i got a  password 
+![Screenshot](Screenshot-10.png)
+Now unlock the pdf by using this also.
 ![Screenshot](Screenshot-9.png)
+
+ -------------------------------------
+ Now move forward to some tools of kali for information gathering of domain .All commands were performed using Kali Linux for footprinting and a Windows PC with Zenmap installed for network scanning.
+Each activity includes:
+- Network reconnaissance
+- Port scanning 
+- Screenshot evidence collected
+- Report maintaing
+- Security tool experimentation with Zenmap
+
+**3.⚙️Tools used:**
+---------------------
+| 🧩 Tools |  Aim |                                                                                                           
+| :--- | :--- |
+| 🖥️ Kali Linux & windows OS | OS used for recognaissance and scanning |
+| 🧠 WHOIS |Shows Public available domain registeration details ,date,server name.  |
+|  🌐 WHATWEB |  Fingerprint web technologies such as servers, CMS platforms, plugins, and IP information|
+| 🧠 Nslookup | Domain name to ip address using DNS |
+| ✴️Curl-I  | Inspect HTTP response headers from a website |
+| 📡 Wafw00f | Inspect Firewall used in web application |
+ | DNSRecon |Enumerate DNS records such as NS, MX, SPF, TXT, and SRV records|
+| Zenmap (N-map GUI) |Scan the local subnet to identify live hosts, IP addresses, and MAC addresses |
+
+**4.Activities Performed:**
+------------------------------
+**4.1 Footprinting & Reconnaissance**
+------------------
+I have performed footprinting on website medirozahospital.com domain using 6 Kali linux tools:-
+- WHOIS
+- WhatWeb
+- Nslookup
+- Curl-I
+- Wafw00f
+- DNSRecon
+Each tools gave different details about the website.
+---------------------------------
+**WHOIS**
+-----
+Firstly of all,I used this tool to determine the Publicaly available details of domain like regesteration info.,server name,Date.
+
+**WhatWeb**
+------
+Secondly I used this to fetch the Tech-service it used .And it gave me result like:-
+- WordPress 7.0.4
+- WP Download Manager 3.3.58
+- Other information exposed by the website
+  
+  **Nslokup**
+  ----------
+  Nslookup resolved domain name into ip address of the web server.
+
+  **Curl**
+  -----------
+   used Curl with the **-I **option to inspect the HTTP response headers. This provided additional information about the web application
+   and exposed the WordPress REST API endpoint /wp-json/.
+
+  **Wafw00f**
+  -------
+  It is graphical firewall detector to detect that which firewall is used to protect the website.
+  It gave result about the firewall used in website --> ModSecurity (SpiderLabs).
+  
+  **DNSRecon**
+  ------
+  Finally, I used DNSRecon to enumerate DNS records. The results provided information related to name servers, mail servers, SPF/TXT records, service records, and DNS software information.
+  
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  👁️‍🗨️ Network Scanning with Zenmap**
+  ------
+For the second activity, I used Zenmap to perform network discovery on my local network. The scan required me to identify my local IP address and subnet, discover live hosts, identified their IP and MAC addresses, and generate a network topology.
+
+Step a:- I downloaded Zenmap-nmap in windows and then added ip address into the target and performed  ping scan.
+The result i got is ip address,mac address .
+
+Step b:- Generate Network Topology
+After completing the scan, I opened the Topology section in Zenmap, enabled the legend, and saved the network topology in PDF format as required by the practical task.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+**5.⚠️Risk Analysis**
+--------
+Based on the information collected during the footprinting and network scanning activities, the following potential risks were identified
+| 🧩 Risk Finding | Observation | Potential Impact | Risk Level |
+|-----------------|-------------|------------------|------------|
+| Web technology information exposed | WhatWeb identified WordPress and WP Download Manager | Attackers may use technology/version info to exploit software | Medium |
+| Server IP address identified | Nslookup resolved the domain to `192.188.123.16` | Reveals network location of web service | Low |
+| HTTP technical information exposed | Curl returned HTTP response headers and exposed `/wp-json/` | May assist enumeration and fingerprinting | Low |
+| WAF technology identified | Wafw00f determined ModSecurity (SpiderLabs) | Reveals security architecture of web service | Low |
+| DNS infrastructure information exposed | DNSRecon identified DNS, mail, and service-related records | DNS details can help build infrastructure profile | Medium |
+| Multiple live hosts on local network | Zenmap scan revealed active devices | Unknown or unauthorized devices may be present on network | Medium |
+
+📷 **Evidence collected**
+![Screenshot](Screenshot-a.png)
+![Screenshot](Screenshot-b.png)
+![Screenshot](Screenshot-c.png)
+![Screenshot](Screenshot-d.png)
+![Screenshot](Screenshot-e.png)
+![Screenshot](Screenshot-f.png)
 
 
