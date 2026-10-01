@@ -192,5 +192,7 @@ Based on the information collected during the footprinting and network scanning 
 ![Screenshot](Screenshot-d.png)
 ![Screenshot](screenshot-e.png)
 ![Screenshot](Screenshot-f.png)
+![Screenshot](Screenshot-g.png)
+![Screenshot](Screenshot-h.png)
 
 
