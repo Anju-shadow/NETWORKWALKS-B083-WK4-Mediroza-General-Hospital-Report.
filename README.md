@@ -133,9 +133,15 @@ Firstly of all,I used this tool to determine the Publicaly available details of 
 **WhatWeb**
 ------
 Secondly I used this to fetch the Tech-service it used .And it gave me result like:-
-- WordPress 7.0.4
-- WP Download Manager 3.3.58
-- Other information exposed by the website
+- Server Type: LiteSpeed
+- Redirect: HTTP → HTTPS (301 Moved Permanently)
+- Response Codes:
+  
+              301 (Redirect)
+
+       403 (Forbidden – access denied)
+
+- Headers: x-turbo-charged-by (LiteSpeed optimization)
   
   **Nslokup**
   ----------
@@ -143,13 +149,12 @@ Secondly I used this to fetch the Tech-service it used .And it gave me result li
 
   **Curl**
   -----------
-   used Curl with the **-I **option to inspect the HTTP response headers. This provided additional information about the web application
-   and exposed the WordPress REST API endpoint /wp-json/.
+   used Curl with the **-I **option to inspect the HTTP response headers. This might not able to provide me cache details.
 
   **Wafw00f**
   -------
   It is graphical firewall detector to detect that which firewall is used to protect the website.
-  It gave result about the firewall used in website --> ModSecurity (SpiderLabs).
+  It gave no result about the firewall used in website due to generic scan .
   
   **DNSRecon**
   ------
@@ -173,10 +178,10 @@ After completing the scan, I opened the Topology section in Zenmap, enabled the 
 Based on the information collected during the footprinting and network scanning activities, the following potential risks were identified
 | 🧩 Risk Finding | Observation | Potential Impact | Risk Level |
 |-----------------|-------------|------------------|------------|
-| Web technology information exposed | WhatWeb identified WordPress and WP Download Manager | Attackers may use technology/version info to exploit software | Medium |
-| Server IP address identified | Nslookup resolved the domain to `192.188.123.16` | Reveals network location of web service | Low |
-| HTTP technical information exposed | Curl returned HTTP response headers and exposed `/wp-json/` | May assist enumeration and fingerprinting | Low |
-| WAF technology identified | Wafw00f determined ModSecurity (SpiderLabs) | Reveals security architecture of web service | Low |
+| Web technology information exposed | WhatWeb identified server Litespeed | Attackers may use technology/version info to exploit software | High |
+| Server IP address identified | Nslookup resolved the domain to `199.188.201.16` | Reveals network location of web service | Low |
+| HTTP technical information exposed | Curl returned no detail | May assist enumeration and fingerprinting | Low |
+| WAF technology identified | Wafw00f not able to catch the firewall used in service | Reveals security architecture of web service | High |
 | DNS infrastructure information exposed | DNSRecon identified DNS, mail, and service-related records | DNS details can help build infrastructure profile | Medium |
 | Multiple live hosts on local network | Zenmap scan revealed active devices | Unknown or unauthorized devices may be present on network | Medium |
 
@@ -185,7 +190,7 @@ Based on the information collected during the footprinting and network scanning 
 ![Screenshot](Screenshot-b.png)
 ![Screenshot](Screenshot-c.png)
 ![Screenshot](Screenshot-d.png)
-![Screenshot](Screenshot-e.png)
+![Screenshot](screenshot-e.png)
 ![Screenshot](Screenshot-f.png)
 
 
