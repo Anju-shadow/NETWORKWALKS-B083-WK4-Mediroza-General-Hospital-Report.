@@ -200,7 +200,7 @@ Risk: Critical
 
 The /old/ directory had directory listing enabled.
 
-The directory exposed a database backup file that was accessible through the web server.
+The directory exposed a database backup file that was accessible through the web server and exposed critical information related role and finance ,contact info,share holders details etc.
 
 Evidence
 ![Screenshot](Screenshot-2019.png)
