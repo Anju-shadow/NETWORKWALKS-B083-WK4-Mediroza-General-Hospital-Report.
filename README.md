@@ -204,3 +204,38 @@ The directory exposed a database backup file that was accessible through the web
 
 Evidence
 ![Screenshot](Screenshot-2019.png)
+![Screenshot](Screenshot-sql.png)
+It is critical point as anyone can misuse this info .
+
+| Name                  | Job Title                 | Department          | Monthly Salary |
+|-----------------------|---------------------------|---------------------|----------------|
+| Dr. Rajesh Naidoo     | Chief Pathologist         | Diagnostics Lab     | R138,000       |
+| Sarah Botha           | Chief Financial Officer   | Finance             | R152,000       |
+| Dr. Johan van der Merwe | Medical Director        | Management          | R160,000       |
+| Dr. Anita Naicker     | Consultant Cardiologist   | Cardiology          | R132,000       |
+| Dr. Ahmed Kara        | Consultant Physician      | Internal Medicine   | R128,000       |
+| Dr. Yusuf Cassim      | Senior Registrar          | Emergency & Trauma  | R74,000        |
+| Michael Roberts       | HR Director               | Human Resources     | R96,000        |
+| Susan Pretorius       | HR Officer                | Human Resources     | R32,000        |
+| Jameel Malik          | IT Systems Administrator  | IT                  | R58,000        |
+| Thabo Molefe          | Network Engineer          | IT                  | R46,000        |
+| Nomvula Khumalo       | Registered Nurse          | Emergency & Trauma  | R34,000        |
+| Lerato Mokoena        | Registered Nurse          | Pediatrics          | R33,000        |
+| Bongani Ndlovu        | Registered Nurse          | Cardiology          | R35,000        |
+| Zanele Mahlangu       | Nursing Sister            | Theatre             | R42,000        |
+| Kagiso Sithole        | Pharmacist                | Pharmacy            | R61,000        |
+| Naledi Zulu           | Pharmacy Assistant        | Pharmacy            | R26,000        |
+| Themba Nkosi          | Radiographer              | Radiology           | R44,000        |
+| Palesa Radebe         | Radiographer              | Radiology           | R43,000        |
+| Deepak Pillay         | Lab Technologist          | Diagnostics Lab     | R41,000        |
+| Kavitha Govender      | Lab Technician            | Diagnostics Lab     | R35,000        |
+| Dr. Suresh Moodley    | Consultant Radiologist    | Radiology           | R130,000       |
+| Dr. Fatima Patel      | Pediatrician              | Pediatrics          | R118,000       |
+| Nisha Singh           | Physiotherapist           | Rehabilitation      | R48,000        |
+| Dr. Vikram Chetty     | Anaesthetist              | Theatre             | R135,000       |
+| David Smith           | Facilities Manager        | Operations          | R52,000        |
+| Karen O'Connor        | Billing Administrator     | Finance             | R29,000        |
+| James Wilson          | Security Supervisor       | Operations          | R27,000        |
+| Linda Fourie          | Receptionist              | Front Office        | R19,000        |
+| Peter van Wyk         | Procurement Officer       | Supply Chain        | R38,000        |
+| Andile Mbeki          | Ward Clerk                | Administration      | R21,000        |
