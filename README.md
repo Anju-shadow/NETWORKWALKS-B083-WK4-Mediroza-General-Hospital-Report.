@@ -66,6 +66,7 @@ Step 2:-Now go to patient portal .
 step 3:-As we have no credential to login lets use SQL based command .The login page returned different responses for invalid usernames and valid usernames with an incorrect password.
 
 This behavior allowed confirmation of whether a username existed.
+![Screenshot](Screenshot-2.png)
 
 Step 4 :- Now added another hyper sql command to login
 ![Screenshot](Screenshot-3.png)
