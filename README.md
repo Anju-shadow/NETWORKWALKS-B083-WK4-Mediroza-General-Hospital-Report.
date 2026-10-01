@@ -334,12 +334,14 @@ I learned:
 - How important authorization and scope are during security testing.
 - How to think about security from both an attacker and defender perspective.
 - How to improve my penetration-testing report writing skills.
+- Why it is necessary to document every steps ,problems-solution in domain of security analyst .
   
 CONCLUSION
 --
 
 Week 4 gave me practical experience in web application penetration testing, SQL Injection, data extraction, password/hash analysis, and security reporting. The project required me to work through different stages, beginning with identifying an entry point and analyzing the application's authentication mechanism. I was able to identify a SQL Injection vulnerability and use the authorized testing environment to demonstrate its potential impact. The project also involved analyzing protected files and investigating further exposure of sensitive information, including employee salary and shareholder information, as required by the assessment.
 Overall, this project improved my technical skills, problem-solving ability, vulnerability analysis, risk assessment, and professional report-writing skills. Most importantly, I learned that successful penetration testing is not only about finding vulnerabilities but also about understanding their impact, documenting clear evidence, and providing practical recommendations for remediation.
+
 ---------
 :👤 Author
 
