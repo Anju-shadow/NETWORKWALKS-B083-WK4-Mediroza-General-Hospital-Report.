@@ -55,22 +55,38 @@ This project alligned with Healthcare  Mediroza General Hospital with explicit p
 - M3:-Confidential Database Information
 - M4:-Penetration testing Report
 
-![Screenshot](Screenshot-1)
+![Screenshot](Screenshot-1.png)
 
 Tools🧰
 --
 Step 1 :- Go to webservice the interface image is above mentioned
+
 Step 2:-Now go to patient portal .
+
 step 3:-As we have no credential to login lets use SQL based command .The login page returned different responses for invalid usernames and valid usernames with an incorrect password.
 
 This behavior allowed confirmation of whether a username existed.
+
 Step 4 :- Now added another hyper sql command to login
+![Screenshot](Screenshot-3.png)
 Step 5 :- These are reports of some patients .
+![Screenshot](Screenshot-4.png)
 Step 6:- Downloaded it and we will try to open it by carcking password .
+
+![Screenshot](Screenshot-5.png)
+
 Step 7:- Go to Networkwalks and use these two tools:---
  - Networkwalks Hash-Calculator
 - Networkwalks Password Cracker
 (a) Opening Hash-calculator then I Uploaded the locked PDF to the Hash Calculator to get the hash lines. The Hash Calculator supports MD5, SHA-1, SHA-256, SHA-384, and SHA-512 or extract a crackable hash from dedicated file .
-(b) Now paste the hash lines in NW password cracker tools .
+(b) Now paste the hash lines in NW password cracker to get password.
+![Screenshot](Screenshot-6.png)
+![Screenshot](Screenshot-7.png)
+
+(c)Here i will use Dictonery based attack .
+![Screenshot](Screenshot-8.png)
+
+Now we got password 
+![Screenshot](Screenshot-9.png)
 
 
