@@ -1,3 +1,4 @@
+
 **NETWORKWALKS-B083-WK-4-WEBAPPLICATION PENETRATION TESTING ASSESSMENT**
 --
 
@@ -196,3 +197,12 @@ Based on the information collected during the footprinting and network scanning 
 ![Screenshot](Screenshot-h.png)
 
 
+**Finding  — Directory Listing / Exposed Database Backup**
+Risk: Critical
+
+The /old/ directory had directory listing enabled.
+
+The directory exposed a database backup file that was accessible through the web server.
+
+Evidence
+![Screenshot](Screenshot-2019.png)
